@@ -9,11 +9,7 @@ const routes: Routes = [
     redirectTo: 'tabs/home',
     pathMatch: 'full'
   },
-  // {
-  //   path: 'home/:id',
-  //   loadChildren: () => import('./pages/tabs/home/home.module').then(m => m.HomePageModule)
-  // },
-
+ 
   {
     path: 'tabs',
     loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)

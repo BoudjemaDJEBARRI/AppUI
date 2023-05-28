@@ -3,7 +3,24 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{home}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-tab-button tab="message">
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        <ion-badge color="primary">8</ion-badge>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-tab-button tab="account">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-buttons>
+
+    <ion-title>Home</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
@@ -16,6 +33,5 @@
 
   <div id="container">
     <strong class="capitalize">Home</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>

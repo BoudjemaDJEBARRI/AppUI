@@ -14,6 +14,14 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
       },
       {
+        path: 'message',
+        loadChildren: () => import('../message/message.module').then( m => m.MessagePageModule)
+      },
+      {
+        path: 'account',
+        loadChildren: () => import('../account/account.module').then( m => m.AccountPageModule)
+      },
+      {
         path: 'search',
         loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
       },

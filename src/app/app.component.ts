@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Home', url: '/pages/tabs/home', icon: 'home' },
+    { title: 'Search', url: '/pages/tabs/', icon: 'search' },
+    { title: 'Add task', url: '/pages/tabs/', icon: 'add' },
+    { title: 'List of tasks', url: '/pages/tabs/', icon: 'list' },
+    { title: 'Progress', url: '/pages/tabs/', icon: 'trending-up' },
+    { title: 'Deleted', url: '/folder/trash', icon: 'trash' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = ['Important tasks', 'Urgent tasks', 'Annex tasks', 'Tasks Done','Notes', 'Reminder', 'Calls', 'Meeting'];
 }
