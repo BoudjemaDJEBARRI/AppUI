@@ -40,28 +40,16 @@ export class TasklistPage implements OnInit {
     { title: "Organize workspace", completed: true }
   ];
   
-
   markAsCompleted(task: any) {
     task.completed = true;
   }
 
-  // tasks: string[] = [
-  //   'Implement user authentication and authorization',
-  //   'Create database models and design database schema',
-  //   'Build RESTful APIs for CRUD operations',
-  //   'Implement server-side validation and error handling',
-  //   'Integrate third-party APIs or services',
-  //   'Develop front-end UI components and user interfaces',
-  //   'Implement data caching and optimization techniques',
-  //   'Write unit tests and perform test-driven development (TDD)',
-  //   'Optimize application performance and scalability',
-  //   'Implement real-time features using web sockets',
-  //   'Configure and deploy the application on a cloud platform',
-  //   'Monitor and troubleshoot application issues',
-  //   'Collaborate with designers and UX/UI teams',
-  //   'Conduct code reviews and provide feedback',
-  //   'Stay updated with the latest technologies and industry trends',
-  // ];
+
+  ctasks: any[] = [
+    { title: 'Task 1', completed: false },
+    { title: 'Task 2', completed: true },
+    { title: 'Task 3', completed: false },
+  ];
 
   constructor() { }
 

@@ -1,0 +1,13 @@
+<ion-list>
+  <ion-item *ngFor="let ctask of ctasks; let i = index">
+    <ion-label [class.completed]="ctask.completed">{{ ctask.title }}</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="markAsCompleted(ctask)" [disabled]="ctask.completed">
+        Mark as Completed
+      </ion-button>
+      <ion-button (click)="deleteTask(i)">
+        Delete
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+</ion-list>

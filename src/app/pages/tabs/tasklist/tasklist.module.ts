@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { TasklistPageRoutingModule } from './tasklist-routing.module';
 
 import { TasklistPage } from './tasklist.page';
+import { TaskListComponentComponent } from 'src/app/components/task-list-component/task-list-component.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { TasklistPage } from './tasklist.page';
     IonicModule,
     TasklistPageRoutingModule
   ],
-  declarations: [TasklistPage]
+  declarations: [TasklistPage, TaskListComponentComponent]
 })
 export class TasklistPageModule {}
