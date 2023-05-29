@@ -24,8 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/message/message.module').then(m => m.MessagePageModule)
   },
   {
-    path: 'account',
-    loadChildren: () => import('./pages/account/account.module').then(m => m.AccountPageModule)
+    path: 'tabs/search',
+    loadChildren: () => import('./pages/tabs/search/search.module').then(m => m.SearchPageModule)
   },
 
 ];

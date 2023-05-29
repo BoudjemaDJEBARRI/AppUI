@@ -3,6 +3,20 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-tab-button tab="message">
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        <ion-badge color="primary">8</ion-badge>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-tab-button tab="account">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-buttons>
+
     <ion-title>My Account</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,7 +29,33 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">My Account</strong>
-    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>My Account</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Account details -->
+        <ion-item>
+          <ion-label>Name:</ion-label>
+          <ion-text>{{ account.name }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Email:</ion-label>
+          <ion-text>{{ account.email }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Phone:</ion-label>
+          <ion-text>{{ account.phone }}</ion-text>
+        </ion-item>
+
+        <!-- Edit button -->
+        <ion-button expand="full" (click)="editAccount()"
+          >Edit Account</ion-button
+        >
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

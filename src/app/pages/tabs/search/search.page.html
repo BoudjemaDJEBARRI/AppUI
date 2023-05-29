@@ -30,7 +30,15 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">Search</strong>
- 
+  <br>  <h1 style="text-align: center">Search for tasks</h1> <br>
+
+    <ion-searchbar color="light" placeholder="Search for tasks..." [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar><br><br>
+
+<ion-list>
+  <ion-item *ngFor="let result of results">
+    <ion-label><h2>{{ result }}</h2></ion-label>
+  </ion-item>
+</ion-list>
+
   </div>
 </ion-content>

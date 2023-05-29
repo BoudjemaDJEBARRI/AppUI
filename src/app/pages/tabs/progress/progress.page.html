@@ -17,7 +17,7 @@
         <ion-label></ion-label>
       </ion-tab-button>
     </ion-buttons>
-    
+
     <ion-title>Progress</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -29,8 +29,17 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">See Progress</strong>
- 
-  </div>
+  <br>  <h1 style="text-align: center; color: var(--ion-color-primary)" >Show Progress</h1> <br>
+
+  <ion-list>
+    <ion-item *ngFor="let task of tasks">
+      <ion-label>{{ task.title }}</ion-label>
+      <div class="progress-bar-container">
+        <div class="progress-bar" [style.width.%]="task.progress">
+          <div class="progress-label">{{ task.progress }}%</div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+   
 </ion-content>

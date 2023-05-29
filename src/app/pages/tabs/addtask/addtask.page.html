@@ -29,8 +29,20 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">Add tasks</strong>
- 
+  <br>  <h1 style="text-align: center; color: var(--ion-color-primary)" >Add Tasks</h1> <br>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Task Title</ion-label>
+      <ion-input type="text" [(ngModel)]="newTask.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Estimated Time</ion-label>
+      <ion-input type="number" [(ngModel)]="newTask.progress"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-button expand="full" (click)="addTask()">Add Task</ion-button>
   </div>
 </ion-content>

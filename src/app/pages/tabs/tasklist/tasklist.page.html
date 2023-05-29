@@ -24,14 +24,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-header collapse="condense">
+  <ion-header collapse="condense" color="primary">
     <ion-toolbar>
-      <ion-title size="large">Tasks</ion-title>
+      <ion-title size="large">List of Tasks</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">List of tasks</strong>
- 
+  
+    <br>  <h1 style="text-align: center; color: var(--ion-color-primary)" >List of Tasks</h1> <br>
+
+    <ion-list lines="full">
+      <ion-item *ngFor="let task of tasks" (click)="markAsCompleted(task)">
+        <ion-icon slot="start" name="checkmark-circle" [color]="task.completed ? 'success' : 'medium'"></ion-icon>
+        <ion-label [class.completed]="task.completed">{{ task.title }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item lines="none" *ngFor="let task of tasks">
+        <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+        <ion-label>{{ task }}</ion-label>
+      </ion-item>
+    </ion-list>
+
   </div>
 </ion-content>

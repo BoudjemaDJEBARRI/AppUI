@@ -3,6 +3,21 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-tab-button tab="message">
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        <ion-badge color="primary">8</ion-badge>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-tab-button tab="account">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-buttons>
+
     <ion-title>Messeges</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,7 +30,11 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">Messeges</strong>
-    
+    <ion-list>
+      <ion-item *ngFor="let message of messages">
+        <ion-label [style.fontWeight]="message.read ? 'normal' : 'bold'">{{ message.title }}</ion-label>
+        <ion-badge color="primary" *ngIf="!message.read">Unread</ion-badge>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
